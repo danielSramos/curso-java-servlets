@@ -20,7 +20,7 @@ public class ListaEmpresasServlet extends HttpServlet {
 		
 		Banco banco = new Banco();
 		List<Empresa> lista = banco.getEmpresas();
-		
+
 		PrintWriter out = response.getWriter();
 		
 		request.setAttribute("nomeEmpresas", lista);
