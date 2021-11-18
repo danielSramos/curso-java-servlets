@@ -7,6 +7,7 @@
 <title>Java Servlets</title>
 </head>
 <body>
+	<core:import url="logout-parcial.jsp" />
 	<form action="${novaEmpresa}" method="post">
 		Nome: <input type="text" name="nome"  />
 		Data Abertura: <input type="text" name="data"  />

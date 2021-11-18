@@ -6,6 +6,7 @@
 		<title>Java Standard TagLib</title>
 	</head>
 	<body>
+		<core:import url="logout-parcial.jsp" />
 		<core:if test="${not empty empresa }"> 
 			Nova empresa ${empresa} cadastrada com sucesso.
 		</core:if>

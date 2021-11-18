@@ -8,7 +8,7 @@
 <title>Java Servlets</title>
 </head>
 <body>
-
+	<core:import url="logout-parcial.jsp" />
 	<form action="${alteraEmpresa}" method="post">
 	
 		Nome: <input type="text" name="nome" value="${empresa.nome}" />

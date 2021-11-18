@@ -17,24 +17,23 @@ import br.com.alura.gerenciador.acao.DeletaEmpresa;
 import br.com.alura.gerenciador.acao.ListaEmpresas;
 import br.com.alura.gerenciador.acao.MostraEmpresa;
 
-@WebServlet("/entrada")
+//@WebServlet("/entrada")
 public class ControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		String paramAcao = request.getParameter("acao");
-		HttpSession sessao = request.getSession();
-		boolean usuarioNaoLogado = sessao.getAttribute("usuarioLogado") == null;
-		boolean acaoProtegida =  !(paramAcao.equals("Login") || paramAcao.equals("LoginForm"));
-		
-		if (usuarioNaoLogado && acaoProtegida) {
-			response.sendRedirect("entrada?acao=LoginForm");
-			return;
-		}
 
-		
+		String paramAcao = request.getParameter("acao");
+//		HttpSession sessao = request.getSession();
+//		boolean usuarioNaoLogado = sessao.getAttribute("usuarioLogado") == null;
+//		boolean acaoProtegida =  !(paramAcao.equals("Login") || paramAcao.equals("LoginForm"));
+//
+//		if (usuarioNaoLogado && acaoProtegida) {
+//			response.sendRedirect("entrada?acao=LoginForm");
+//			return;
+//		}
+
 		String nomeDaClasse = "br.com.alura.gerenciador.acao." + paramAcao;
 		String nome;
 		try {
